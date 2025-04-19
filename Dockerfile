@@ -8,4 +8,4 @@ RUN mvn -f /usr/src/app/pom.xml clean package
 FROM tomcat
 RUN rm -fr /usr/local/tomcat/webapps/ROOT
 # Corrected stage reference and filename case
-COPY --from=stage1 /usr/src/app/target/*.war /usr/local/tomcat/webapps/ROOT.war
+COPY --from=stage1 /usr/src/app/target/japp1.war /usr/local/tomcat/webapps/v2.war
